@@ -9,7 +9,12 @@
     <Grid>
         <Button Content="Properties" HorizontalAlignment="Left" Height="19" Margin="489,63,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.351,0.526"/>
         <Button Content="Add" HorizontalAlignment="Left" Height="19" Margin="428,63,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.913,0.553"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="566" Margin="293,87,0,0" VerticalAlignment="Top" Width="299"/>
+        <StackPanel HorizontalAlignment="Left" Height="538" Margin="276,105,0,0" VerticalAlignment="Top" Width="300">
+            <Button Content="Button" Height="58"/>
+            <Button Content="Button" Height="58"/>
+            <Button Content="Button" Height="58"/>
+            <Button Content="Button" Height="58"/>
+        </StackPanel>
 
     </Grid>
 </Window>
