@@ -1,0 +1,16 @@
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\bin\Debug\TestMakerWPF_FirstInstance.exe.config
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\bin\Debug\TestMakerWPF_FirstInstance.exe
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\bin\Debug\TestMakerWPF_FirstInstance.pdb
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.csprojAssemblyReference.cache
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\MainWindow.g.cs
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\App.g.cs
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance_MarkupCompile.cache
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance_MarkupCompile.lref
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\MainWindow.baml
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.g.resources
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.Properties.Resources.resources
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.csproj.GenerateResource.cache
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.exe
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TestMakerWPF_FirstInstance.pdb
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TaskControl.g.cs
+C:\Users\jasus\source\repos\TestMakerWPF_FirstInstance\obj\Debug\TaskControl.baml
