@@ -55,9 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBaseWindow.xaml.cs">
+      <DependentUpon>DataBaseWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaskControl.xaml.cs">
       <DependentUpon>TaskControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaskView.xaml.cs">
+      <DependentUpon>TaskView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DataBaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +81,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TaskControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

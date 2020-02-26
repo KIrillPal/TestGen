@@ -8,13 +8,17 @@
         Title="MainWindow" Height="683.7" Width="610">
     <Grid>
         <Button Content="Properties" HorizontalAlignment="Left" Height="19" Margin="489,63,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.351,0.526"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="19" Margin="428,63,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.913,0.553"/>
-        <StackPanel HorizontalAlignment="Left" Height="538" Margin="276,105,0,0" VerticalAlignment="Top" Width="300">
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
+        <Button x:Name="AddTaskButton" Content="Add" HorizontalAlignment="Left" Height="19" Margin="428,63,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.913,0.553" Click="AddTaskButton_Click"/>
+        <StackPanel x:Name="TaskStackPanel" HorizontalAlignment="Left" Height="556" Margin="348,87,0,0" VerticalAlignment="Top" Width="228" Background="#FFEEEEEE">
+            <StackPanel.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.OpacityMask>
         </StackPanel>
+        <Label Content="Tasks" HorizontalAlignment="Left" Height="34" Margin="318,48,174,0" VerticalAlignment="Top" Width="110" FontSize="22" HorizontalContentAlignment="Center"/>
+        <Button Content="press to open database" HorizontalAlignment="Left" Margin="53,63,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click"/>
 
     </Grid>
 </Window>

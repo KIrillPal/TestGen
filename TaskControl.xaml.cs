@@ -19,10 +19,27 @@ namespace TestMakerWPF_FirstInstance
     /// </summary>
     public partial class TaskControl : Window
     {
-        public TaskControl()
+        Task targetTask;
+        TaskView targetTaskView;
+        public TaskControl(Task task, TaskView taskView)
         {
+            targetTask = task;
+            targetTaskView = taskView;
             InitializeComponent();
+
+            TitleTB.Text = task.Title;
+            TaskTestTB.Text = task.Text;
+            AnswerFieldTB.Text = task.AnswerField;
         }
 
+
+        private void ApplyB_Click(object sender, RoutedEventArgs e)
+        {
+            targetTask.Title = TitleTB.Text;
+            targetTask.Text = TaskTestTB.Text;
+            targetTask.AnswerField = AnswerFieldTB.Text;
+            targetTaskView.TitleLabel.Content = targetTask.Title;
+            this.Close();
+        }
     }
 }

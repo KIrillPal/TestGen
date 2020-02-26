@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jasus\Source\Repos\KIrillPal\TestGen\obj\Debug\
+C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\
 TestMakerWPF_FirstInstance
 none
 false
 DEBUG;TRACE
-C:\Users\jasus\Source\Repos\KIrillPal\TestGen\App.xaml
-2-1717137691
+C:\Users\German\Source\Repos\KIrillPal\TestGen\App.xaml
+4-838995671
 
-7-183649727
+8-1398748395
 13-1505183044
-MainWindow.xaml;TaskControl.xaml;
+DataBaseWindow.xaml;MainWindow.xaml;TaskControl.xaml;TaskView.xaml;
 
-True
+False
 
