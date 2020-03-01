@@ -27,8 +27,11 @@ namespace TestMakerWPF_FirstInstance
             targetTaskView = taskView;
             InitializeComponent();
 
+            DB_Dropdown.ItemsSource = MainWindow.DataBases.Keys;
+            if(targetTask.DB != null)
+                DB_Dropdown.SelectedItem = targetTask.DB.Name;
             TitleTB.Text = task.Title;
-            TaskTestTB.Text = task.Text;
+            TaskTestTB.Document.Blocks.Add(new Paragraph(new Run(task.Text)));
             AnswerFieldTB.Text = task.AnswerField;
         }
 
@@ -36,8 +39,16 @@ namespace TestMakerWPF_FirstInstance
         private void ApplyB_Click(object sender, RoutedEventArgs e)
         {
             targetTask.Title = TitleTB.Text;
-            targetTask.Text = TaskTestTB.Text;
+            targetTask.Text = new TextRange(TaskTestTB.Document.ContentStart, TaskTestTB.Document.ContentEnd).Text;
             targetTask.AnswerField = AnswerFieldTB.Text;
+            if (DB_Dropdown.Text.Length == 0)
+            {
+                MessageBox.Show("Database is not selected, expect build errors!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                targetTask.DB = MainWindow.DataBases[DB_Dropdown.Text];
+            }
             targetTaskView.TitleLabel.Content = targetTask.Title;
             this.Close();
         }

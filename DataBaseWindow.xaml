@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestMakerWPF_FirstInstance"
         mc:Ignorable="d"
-        Title="DataBase" Height="398.634" Width="805">
+        Title="DataBase" Height="407.634" Width="730">
     <Grid Margin="0,49,2,0" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-        <Label x:Name="DataBaseLabel" Content="DataBaseName" HorizontalAlignment="Left" Height="40" Margin="0,-49,0,0" VerticalAlignment="Top" Width="211" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="Add_Row" Content="+" HorizontalAlignment="Right" Height="31" Margin="0,-40,429,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="20" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
-        <Button x:Name="Remove_Row" Content="-" HorizontalAlignment="Right" Height="31" Margin="0,-40,353,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="20"/>
-        <DataGrid x:Name="DataGrid" HeadersVisibility="None" Margin="0,0,201,0" CanUserSortColumns="False" BorderBrush="Black" Background="White"/>
-        <Button x:Name="ApplyButton" Content="Apply" HorizontalAlignment="Right" Height="31" Margin="0,-40,201,0" VerticalAlignment="Top" Width="116" Click="ApplyButton_Click"/>
+        <Label x:Name="DataBaseLabel" Content="DataBaseName" HorizontalAlignment="Left" Height="40" Margin="0,-49,0,0" VerticalAlignment="Top" Width="211" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="DataGrid" HeadersVisibility="Column" CanUserSortColumns="False" BorderBrush="Black" Background="White" Margin="0,10,10,0" SelectionUnit="Cell" ColumnHeaderHeight="10" LoadingRow="DataGrid_LoadingRow" Grid.ColumnSpan="2"/>
+        <Button x:Name="ApplyButton" Content="Apply" HorizontalAlignment="Right" Height="31" Margin="0,-40,37,0" VerticalAlignment="Top" Width="116" Click="ApplyButton_Click" Grid.Column="1"/>
+        <Button x:Name="AddButton" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="425,-40,0,0" VerticalAlignment="Top" Width="88" Click="AddButton_Click"/>
     </Grid>
 </Window>

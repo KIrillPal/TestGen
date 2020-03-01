@@ -39,13 +39,14 @@ public interface IPreview
 
 public class DataBase
 {
+    public string Name;
     public List<List<string>> Data;
     public List<string> ColumnHeaders;
 
     public DataBase()
     {
         Data = new List<List<string>> { new List<string>() { "smth", "smth" } };
-        ColumnHeaders = new List<string>{ "newColumn", "anothernewColumn" };
+        ColumnHeaders = new List<string>{ "new11Column", "anothernewColumn" };
     }
 }
 
@@ -63,6 +64,7 @@ public class DataBase
             InitializeComponent();
             Tasks = new List<Task>();
             DataBases = new Dictionary<string, DataBase>();
+            DB_ListBox.ItemsSource = DataBases.Keys;
         }
 
         private void AddTaskButton_Click(object sender, RoutedEventArgs e)
@@ -88,6 +90,24 @@ public class DataBase
             DataBaseWindow dbWindow = new DataBaseWindow();
             dbWindow.InitializeDatabase("SampleName");
             dbWindow.ShowDialog();
+        }
+
+        private void DB_AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            var dbNameSelect = new DatabaseNameSelector();
+            dbNameSelect.ShowDialog();
+            DB_ListBox.Items.Refresh();
+        }
+
+        private void DB_ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int index = DB_ListBox.SelectedIndex;
+            if(index != -1)
+            {
+                var DBWindow = new DataBaseWindow();
+                DBWindow.InitializeDatabase((string)DB_ListBox.SelectedItem);
+                DBWindow.ShowDialog();
+            }
         }
     }
 }

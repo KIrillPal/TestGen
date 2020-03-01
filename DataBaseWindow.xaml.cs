@@ -42,13 +42,14 @@ namespace TestMakerWPF_FirstInstance
             var dataTable = new DataTable();
             for (int i = 0; i < targetDB.ColumnHeaders.Count; ++i)
             {
-                dataTable.Columns.Add("empty" + i, typeof(string)); // columnheader used for size
+                dataTable.Columns.Add(i.ToString(), typeof(string)); // columnheader used for size
             }
             var headerRow = dataTable.NewRow();
             for(int i = 0; i < targetDB.ColumnHeaders.Count; ++i)
             {
                 headerRow[i] = targetDB.ColumnHeaders[i];
             }
+          
             dataTable.Rows.Add(headerRow);
 
             for (int i = 0; i < targetDB.Data.Count; ++i)
@@ -60,9 +61,18 @@ namespace TestMakerWPF_FirstInstance
                 }
                 dataTable.Rows.Add(newRow);
             }
+           
             DataGrid.ItemsSource = dataTable.DefaultView;
         }
 
+        public void DataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+            var row = e.Row;
+            if(row.GetIndex() == 0)
+            {
+                row.Background = new SolidColorBrush(Colors.AliceBlue);
+            }
+        }
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
             var dataTable = ((DataView)DataGrid.ItemsSource).Table;
@@ -85,8 +95,24 @@ namespace TestMakerWPF_FirstInstance
                     targetDB.Data[i - 1].Add((string)Row[j]);
                 }
             }
-
+            targetDB.Name = (string)DataBaseLabel.Content;
             MainWindow.DataBases[(string)DataBaseLabel.Content] = targetDB;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            var curdataTable = ((DataView)DataGrid.ItemsSource).Table;
+            curdataTable.Columns.Add(curdataTable.Columns.Count.ToString(), typeof(string)); // columnheader used for size
+            var headerRow = curdataTable.Rows[0];
+            headerRow[headerRow.ItemArray.Length - 1] = "newColumn";
+            DataGrid.ItemsSource = null;
+            DataGrid.ItemsSource = curdataTable.DefaultView;
+            DataGrid.Items.Refresh();
+        }
+
+        private void DataGrid_DragOver(object sender, DragEventArgs e)
+        {
+
         }
     }
 }

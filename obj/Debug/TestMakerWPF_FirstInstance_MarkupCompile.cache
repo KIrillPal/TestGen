@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\German\Source\Repos\KIrillPal\TestGen\App.xaml
-4-838995671
+51085401240
 
-8-1398748395
+10-1687060118
 13-1505183044
-DataBaseWindow.xaml;MainWindow.xaml;TaskControl.xaml;TaskView.xaml;
+DatabaseNameSelector.xaml;DataBaseWindow.xaml;MainWindow.xaml;TaskControl.xaml;TaskView.xaml;
 
-False
+True
 

@@ -50,3 +50,5 @@ C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\TaskView.g.cs
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\TaskView.baml
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DataBaseWindow.g.cs
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DataBaseWindow.baml
+C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DatabaseNameSelector.g.cs
+C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DatabaseNameSelector.baml
