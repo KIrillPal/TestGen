@@ -52,3 +52,10 @@ C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DataBaseWindow.g.cs
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DataBaseWindow.baml
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DatabaseNameSelector.g.cs
 C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\DatabaseNameSelector.baml
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\PdfSharp.Charting.dll
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\PdfSharp.dll
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\PdfSharp.xml
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\PdfSharp.Charting.xml
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\German\Source\Repos\KIrillPal\TestGen\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\German\Source\Repos\KIrillPal\TestGen\obj\Debug\TestMakerWPF_FirstInstance.csproj.CopyComplete

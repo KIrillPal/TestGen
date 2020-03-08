@@ -23,6 +23,7 @@
         <ListBox x:Name="DB_ListBox" HorizontalAlignment="Left" Height="551" Margin="10,92,0,0" VerticalAlignment="Top" Width="183" Background="#FFEEEEEE" MouseDoubleClick="DB_ListBox_MouseDoubleClick">
             
         </ListBox>
+        <Button x:Name="PreviewButton" Content="Preview" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Click="PreviewButton_Click"/>
 
     </Grid>
 </Window>
