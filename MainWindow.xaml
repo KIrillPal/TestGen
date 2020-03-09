@@ -5,16 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestMakerWPF_FirstInstance"
         mc:Ignorable="d"
-        Title="MainWindow" Height="683.7" Width="610">
+        Title="MainWindow" Height="683.7" Width="639">
     <Grid>
-        <Button Content="Properties" HorizontalAlignment="Left" Height="19" Margin="489,63,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.351,0.526"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="19" Margin="428,63,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.913,0.553"/>
-        <StackPanel HorizontalAlignment="Left" Height="538" Margin="276,105,0,0" VerticalAlignment="Top" Width="300">
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
-            <Button Content="Button" Height="58"/>
+        <Button Content="Properties" HorizontalAlignment="Right" Height="19" Margin="0,63,41,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.351,0.526"/>
+        <Button x:Name="AddTaskButton" Content="Add" HorizontalAlignment="Right" Height="19" Margin="0,63,123,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.913,0.553" Click="AddTaskButton_Click"/>
+        <StackPanel x:Name="TaskStackPanel" HorizontalAlignment="Right" Height="556" Margin="0,87,26,0" VerticalAlignment="Top" Width="228" Background="#FFEEEEEE">
+            <StackPanel.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.OpacityMask>
         </StackPanel>
+        <Label Content="Tasks" HorizontalAlignment="Right" Height="34" Margin="0,53,174,0" VerticalAlignment="Top" Width="80" FontSize="22"/>
+        <Label Content="Databases" HorizontalAlignment="Left" Height="34" Margin="10,53,0,0" VerticalAlignment="Top" Width="110" FontSize="22" HorizontalContentAlignment="Center"/>
+        <Button x:Name="DB_AddButton" Content="Add" HorizontalAlignment="Left" Height="18" Margin="135,64,0,0" VerticalAlignment="Top" Width="58" Click="DB_AddButton_Click"/>
+        <ListBox x:Name="DB_ListBox" HorizontalAlignment="Left" Height="551" Margin="10,92,0,0" VerticalAlignment="Top" Width="183" Background="#FFEEEEEE" MouseDoubleClick="DB_ListBox_MouseDoubleClick">
+            
+        </ListBox>
+        <Button x:Name="PreviewButton" Content="Save as PDF" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="110" Click="PreviewButton_Click" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>

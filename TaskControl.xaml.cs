@@ -19,10 +19,62 @@ namespace TestMakerWPF_FirstInstance
     /// </summary>
     public partial class TaskControl : Window
     {
-        public TaskControl()
+        private readonly Task targetTask;
+        private readonly TaskView targetTaskView;
+
+        public enum TASKTYPE
         {
+            NONE,
+            TEST,
+            LINK
+        }
+        public TaskControl(Task task, TaskView taskView)
+        {
+            targetTask = task;
+            targetTaskView = taskView;
             InitializeComponent();
+
+            DB_Dropdown.ItemsSource = MainWindow.DataBases.Keys;
+            if(targetTask.DB != null)
+                DB_Dropdown.SelectedItem = targetTask.DB.Name;
+            TitleTB.Text = task.Title;
+            AnswerFieldTB.Text = task.AnswerField;
+            TaskType_Dropdown.ItemsSource = Enum.GetNames(typeof(TASKTYPE));
         }
 
+
+        private void ApplyB_Click(object sender, RoutedEventArgs e)
+        {
+            targetTask.Title = TitleTB.Text;
+            targetTask.Text = new TextRange(TaskTestTB.Document.ContentStart, TaskTestTB.Document.ContentEnd).Text;
+            targetTask.AnswerField = AnswerFieldTB.Text;
+            if (DB_Dropdown.Text.Length == 0)
+            {
+                MessageBox.Show("Database is not selected, expect build errors!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                targetTask.DB = MainWindow.DataBases[DB_Dropdown.Text];
+            }
+            targetTaskView.TitleLabel.Content = targetTask.Title;
+            switch(TaskType_Dropdown.SelectedIndex)
+            {
+                case (int)TASKTYPE.NONE:
+                    targetTask.answerGenerator = null;
+                    targetTask.answerVisualizer = null;
+                break;
+
+                case (int)TASKTYPE.TEST:
+                    targetTask.answerGenerator = new TestAnswerGenerator();
+                    targetTask.answerVisualizer = new TestAnswerVisualizer();
+                    break;
+
+                case (int)TASKTYPE.LINK:
+                    targetTask.answerGenerator = new LinkAnswerGenerator();
+                    targetTask.answerVisualizer = new LinkAnswerVisualizer();
+                    break;
+            }
+            this.Close();
+        }
     }
 }
