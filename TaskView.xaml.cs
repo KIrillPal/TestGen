@@ -25,8 +25,6 @@ namespace TestMakerWPF_FirstInstance
         public TaskView(Task task)
         {
             InitializeComponent();
-            task.answerGenerator = new TestAnswerGenerator();
-            task.answerVisualizer = new TestAnswerVisualizer();
             DelButton.Click += ((s,e) => MainWindow.Tasks.Remove(task));
             DelButton.Click += (s, e) => (this.Parent as StackPanel).Children.Remove(this);
         }

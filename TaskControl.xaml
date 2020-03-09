@@ -13,5 +13,7 @@
         <Button x:Name="ApplyB" Content="Apply" HorizontalAlignment="Left" Margin="604,291,0,0" VerticalAlignment="Top" Width="148" Height="69" Click="ApplyB_Click"/>
         <ComboBox x:Name ="DB_Dropdown" HorizontalAlignment="Left" Height="18" Margin="450,61,0,0" VerticalAlignment="Top" Width="302"/>
         <Label Content="Database Binding" HorizontalAlignment="Left" Height="31" Margin="450,30,0,0" VerticalAlignment="Top" Width="302" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name ="TaskType_Dropdown" HorizontalAlignment="Left" Height="41" Margin="317,319,0,0" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Task Type" HorizontalAlignment="Left" Height="28" Margin="319,291,0,0" VerticalAlignment="Top" Width="176"/>
     </Grid>
 </Window>

@@ -19,8 +19,15 @@ namespace TestMakerWPF_FirstInstance
     /// </summary>
     public partial class TaskControl : Window
     {
-        Task targetTask;
-        TaskView targetTaskView;
+        private readonly Task targetTask;
+        private readonly TaskView targetTaskView;
+
+        public enum TASKTYPE
+        {
+            NONE,
+            TEST,
+            LINK
+        }
         public TaskControl(Task task, TaskView taskView)
         {
             targetTask = task;
@@ -31,8 +38,8 @@ namespace TestMakerWPF_FirstInstance
             if(targetTask.DB != null)
                 DB_Dropdown.SelectedItem = targetTask.DB.Name;
             TitleTB.Text = task.Title;
-            TaskTestTB.Document.Blocks.Add(new Paragraph(new Run(task.Text)));
             AnswerFieldTB.Text = task.AnswerField;
+            TaskType_Dropdown.ItemsSource = Enum.GetNames(typeof(TASKTYPE));
         }
 
 
@@ -50,6 +57,23 @@ namespace TestMakerWPF_FirstInstance
                 targetTask.DB = MainWindow.DataBases[DB_Dropdown.Text];
             }
             targetTaskView.TitleLabel.Content = targetTask.Title;
+            switch(TaskType_Dropdown.SelectedIndex)
+            {
+                case (int)TASKTYPE.NONE:
+                    targetTask.answerGenerator = null;
+                    targetTask.answerVisualizer = null;
+                break;
+
+                case (int)TASKTYPE.TEST:
+                    targetTask.answerGenerator = new TestAnswerGenerator();
+                    targetTask.answerVisualizer = new TestAnswerVisualizer();
+                    break;
+
+                case (int)TASKTYPE.LINK:
+                    targetTask.answerGenerator = new LinkAnswerGenerator();
+                    targetTask.answerVisualizer = new LinkAnswerVisualizer();
+                    break;
+            }
             this.Close();
         }
     }
